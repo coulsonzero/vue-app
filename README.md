@@ -41,11 +41,36 @@ import 引用的包需要放在头部
 error: 'error  Newline required at end of file but not found'
 > 增加一个空行即可！
 
-
+Qusetion:
 字符串使用单引号，不能使用双引号
 语句末尾不需要加分号
 对象末项不需要加逗号
 
+Solution:
+项目根目录加一个.prettierrc.json的配置文件
+
+```json
+{
+ "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none"
+}
+```
+
+[Vue warn]: Unknown custom element: <chart> - did you register the component correctly? For recursive components, make sure to provide the "name" option
+
+Solution:
+> 注册组件关键字components写错导致无法使用
+
+Question:
+error  Missing space before function parentheses
+> () 前少了一个空格！
+
+```js
+data () {
+    return {}
+}
+```
 
 * vue临时启动端口
 

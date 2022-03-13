@@ -1,16 +1,11 @@
 <template>
   <div class="home">
-    <ChartBar />
+    Home
   </div>
 </template>
 
 <script>
-import ChartBar from '@/components/ChartBar.vue'
-
 export default {
-  name: 'HomeView',
-  components: {
-    ChartBar
-  }
+  name: 'HomeView'
 }
 </script>

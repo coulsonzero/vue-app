@@ -1,15 +1,34 @@
 <template>
+  <div class="">
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
+      For a guide and recipes on how to configure / customize this project,<br />
       check out the
     </p>
+    <div class='chart' ref='chartbar_ref'></div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'ChartView',
-  props: {
-    msg: String
+  name: 'ChartBar',
+  data () {
+    return {
+      chartInstance: null
+    }
+  },
+  mouted () {
+    this.initChart()
+    this.getData()
+  },
+  method: {
+    initChart () {
+      this.chartInstance = this.$echarts.init(this.$refs.chartbar_ref)
+    },
+    async getData () {
+      const ret = this.$http.get('chartbar')
+      console.log(ret)
+    },
+    updateChart () {}
   }
 }
 </script>
