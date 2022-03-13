@@ -10,7 +10,7 @@ import * as echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 
 // main.js全局引用axios
-axios.defaults.baseURL = 'http://localhost:8080/api/'
+// axios.defaults.baseURL = 'http://localhost:8080'
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false

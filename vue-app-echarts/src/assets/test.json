@@ -1,0 +1,6 @@
+{
+    "chartData": {
+        "day": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        "seriesData": [10, 280, 50, 193, 390, 330, 220]
+    }
+}

@@ -10,19 +10,13 @@
 
 <script>
 export default {
-  // name: 'ChartBar',
-  data () {
-    return {
-      myChart: null
-    }
-  },
   mounted () {
     this.initChart()
   },
   methods: {
     // 初始化echarts对象
     initChart () {
-      this.myChart = this.$echarts.init(this.$refs.chartbar_ref)
+      var myChart = this.$echarts.init(this.$refs.chartbar_ref)
       var option = {
         xAxis: {
           type: 'category',
@@ -38,17 +32,17 @@ export default {
           }
         ]
       }
-      this.myChart.setOption(option)
-    },
+      myChart.setOption(option)
+    }
+    /*
     // 获取服务器数据
     async getData () {
       // http://localhost:8080/api/bar
-      const ret = await this.$http.get('bar')
+      const ret = await this.$http.get('http://localhost:8080/api/bar')
       console.log(ret)
     },
-    // 更新图表
-    updateChart () {
-    }
+    updateChart () {}
+    */
   }
 }
 </script>
