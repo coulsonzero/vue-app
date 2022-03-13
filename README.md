@@ -95,9 +95,28 @@ npm install echarts --save
 
 ```js
 // main.js全局引用echarts
-import Echarts from 'echarts'
+// echarts4.8
+// import echarts from 'echarts'
+// echarts5.0
+import * as  echarts from 'echarts'
 
-Vue.prototype.$echarts = Echarts
+Vue.prototype.$echarts = echarts
+```
+
+
+问题：引入Echarts出现 “init of undefined“ 的解决方案:
+问题原因：Echarts5.0的引入方式和Echarts4的引入方式不一样
+解决方法：
+1、降版本，引入Echarts4的版
+```sh
+npm uninstall echarts --save
+npm install echarts@4.8.0 --save
+npm run serve
+```
+2.使用Echarts5的版本
+```js
+import * as echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 ```
 
 * axios
